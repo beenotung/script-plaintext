@@ -1,5 +1,5 @@
 {
-  "name": "plain-text",
+  "name": "script-plaintext",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -11,6 +11,9 @@
   "license": "BSD-2-Clause",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin":{
+    "script-plaintext":"dist/cli.js"
+  },
   "scripts": {
     "test": "npm run rawtest",
     "clean": "rimraf node_modules/@beenotung/tslib/index.* dist",
@@ -18,6 +21,7 @@
     "postformat": "tslint -p . --fix",
     "prebuild": "npm run clean",
     "build": "tsc",
+    "postbuild": "chmod +x dist/cli.js",
     "pretest": "npm run format && npm run build",
     "rawtest": "ts-node test/index.ts",
     "prepublishOnly": "npm run rawtest && npm run build"
@@ -31,10 +35,12 @@
     "test": "test"
   },
   "dependencies": {
-    "@beenotung/tslib": "^14.14.0"
+    "@beenotung/tslib": "^14.14.0",
+    "tape": "^4.10.2"
   },
   "devDependencies": {
     "@types/node": "8",
+    "@types/tape": "^4.2.33",
     "husky": "^2.3.0",
     "prettier": "^1.17.1",
     "rimraf": "^2.6.3",

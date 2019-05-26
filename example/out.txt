@@ -1,0 +1,2 @@
+cd ~/local/opt/SoundWireServer
+fork ./SoundWireServer
