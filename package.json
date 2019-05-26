@@ -1,6 +1,6 @@
 {
   "name": "script-plaintext",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert script output with color code into plain text",
   "keywords": [],
   "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
