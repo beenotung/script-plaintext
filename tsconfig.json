@@ -10,13 +10,12 @@
     "skipLibCheck": true,
     "lib": [
       "dom",
-      "es2015",
-      "es2018"
+      "es2021"
     ],
     "downlevelIteration": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "target": "es5",
+    "target": "es2022",
     "outDir": "dist"
   },
   "include": [
